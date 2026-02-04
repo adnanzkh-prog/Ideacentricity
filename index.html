@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeaCentricity | Award-Winning Social Innovation & Software Development Agency </title>
+    <meta name="description" content="Fulbright award-winning social innovation & software development agency. 10+ years delivering custom web apps, mobile solutions, enterprise software globally. Served prestigious clients including UNICEF, Mercy Corps, Unilever, Nestlé. From ideation to deployment.">
+    <meta name="keywords" content="software development Pakistan, custom web development Lahore, mobile app development, enterprise software solutions, UNICEF projects, Fulbright award, Adnan Khawaja, IdeaCentricity, digital transformation">
+    <meta name="author" content="Adnan Khawaja">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ideacentricity.biz">
+    <meta property="og:title" content="IdeaCentricity | From Ideation to Digital Reality">
+    <meta property="og:description" content="Award-winning software development agency serving global clients including UNICEF, Mercy Corps, Unilever. 10+ years of transforming complex problems into elegant solutions.">
+    <meta property="og:image" content="https://i.ibb.co/27VQ2X7/ideacentricity-logo.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IdeaCentricity | Software Development Agency">
+    <meta name="twitter:description" content="Fulbright award-winning agency delivering custom software solutions for global impact.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ideacentricity.com">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "IdeaCentricity",
+        "url": "https://ideacentricity.com",
+        "logo": "https://i.ibb.co/27VQ2X7/ideacentricity-logo.png",
+        "founder": {
+            "@type": "Person",
+            "name": "Adnan Khawaja",
+            "jobTitle": "Founder & CEO",
+            "alumniOf": "Lahore University of Management Sciences",
+            "award": "Fulbright Social Innovation Award"
+        },
+        "description": "Award-winning software development agency specializing in custom web applications, mobile apps, and enterprise software solutions.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Lahore",
+            "addressCountry": "PK"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+923214114969",
+            "contactType": "sales",
+            "availableLanguage": ["English", "Urdu"]
+        },
+        "sameAs": [
+            "https://pk.linkedin.com/in/adnanzkhawaja",
+            "https://www.youtube.com/watch?v=NsFXo4pW2cg"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Software Development Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Custom Web Development"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Mobile App Development"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Enterprise Software Solutions"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0ea5e9',
+                            purple: '#8b5cf6',
+                            pink: '#ec4899',
+                            dark: '#0f172a',
+                            accent: '#f59e0b'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { overflow-x: hidden; font-family: 'Inter', sans-serif; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 50%);
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(90deg, #0ea5e9, #8b5cf6);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.4);
+        }
+        
+        .service-card { 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(139, 92, 246, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: inherit;
+        }
+        .service-card:hover::before { opacity: 1; }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        .client-logo {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s;
+        }
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, #0ea5e9, #8b5cf6, #ec4899) border-box;
+            border: 2px solid transparent;
+        }
+        
+        .text-gradient-animate {
+            background: linear-gradient(90deg, #0ea5e9, #8b5cf6, #ec4899, #0ea5e9);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-shift 3s ease infinite;
+        }
+        
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .orbit {
+            animation: orbit 20s linear infinite;
+        }
+        @keyframes orbit {
+            from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+        }
+        
+        /* AI Chat Widget Styles */
+        .ai-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .ai-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(14, 165, 233, 0.4);
+            transition: all 0.3s;
+        }
+        .ai-button:hover {
+            transform: scale(1.1);
+        }
+        .ai-chat {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .ai-chat.active { display: flex; }
+        
+        /* Voice call button pulse */
+        .voice-pulse {
+            animation: voice-pulse 2s infinite;
+        }
+        @keyframes voice-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(14, 165, 233, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
+        }
+    </style>
+</head>
+<body class="text-slate-800 bg-white antialiased">
+
+    <!-- AI Assistant Widget -->
+    <div class="ai-widget">
+        <div class="ai-chat" id="aiChat">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-white">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                            <i data-lucide="bot" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">IC Assistant</p>
+                            <p class="text-xs text-blue-100">Online</p>
+                        </div>
+                    </div>
+                    <button onclick="toggleAI()" class="text-white/80 hover:text-white">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="flex-1 p-4 overflow-y-auto bg-slate-50" id="chatMessages">
+                <div class="flex gap-2 mb-4">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="bot" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div class="bg-white p-3 rounded-2xl rounded-tl-none shadow-sm max-w-[80%]">
+                        <p class="text-sm">Hello! I'm IdeaCentricity's AI assistant. I can help you with:</p>
+                        <ul class="text-xs mt-2 space-y-1 text-slate-600">
+                            <li>• Project inquiries</li>
+                            <li>• Service information</li>
+                            <li>• Schedule a call with Adnan</li>
+                            <li>• Technical questions</li>
+                        </ul>
+                        <p class="text-xs mt-2 text-blue-600">Or click below to talk directly:</p>
+                        <button onclick="initiateVoiceCall()" class="mt-2 w-full bg-green-500 text-white py-2 rounded-lg text-sm font-medium flex items-center justify-center gap-2 hover:bg-green-600 transition-colors voice-pulse">
+                            <i data-lucide="phone" class="w-4 h-4"></i>
+                            Call Adnan Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 bg-white border-t border-slate-200">
+                <div class="flex gap-2">
+                    <input type="text" id="chatInput" placeholder="Type your message..." 
+                           class="flex-1 px-4 py-2 border border-slate-300 rounded-full text-sm focus:outline-none focus:border-blue-500"
+                           onkeypress="if(event.key==='Enter')sendMessage()">
+                    <button onclick="sendMessage()" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                </div>
+                <div class="flex gap-2 mt-2">
+                    <button onclick="quickReply('pricing')" class="text-xs px-3 py-1 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors">Pricing</button>
+                    <button onclick="quickReply('portfolio')" class="text-xs px-3 py-1 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors">Portfolio</button>
+                    <button onclick="quickReply('call')" class="text-xs px-3 py-1 bg-slate-100 rounded-full hover:bg-slate-200 transition-colors">Schedule Call</button>
+                </div>
+            </div>
+        </div>
+        <div class="ai-button" onclick="toggleAI()">
+            <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo with Animation -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo(0,0)">
+                    <div class="w-12 h-12 rounded-xl overflow-hidden shadow-lg bg-slate-900 relative">
+                        <img src="https://i.ibb.co/27VQ2X7/ideacentricity-logo.png" 
+                             alt="IdeaCentricity Logo" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl\'>IC</div>'">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 animate-pulse"></div>
+                    </div>
+                    <div>
+                        <span class="font-display font-bold text-2xl text-slate-900 block leading-none group-hover:text-blue-600 transition-colors">IdeaCentricity</span>
+                        <span class="text-[10px] text-slate-500 font-medium tracking-wider uppercase">Where Tech Meets Purpose</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Services</a>
+                    <a href="#work" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Work</a>
+                    <a href="#clients" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">Clients</a>
+                    <a href="#about" class="nav-link text-sm font-medium text-slate-600 hover:text-slate-900">About</a>
+                    <a href="#contact" class="btn-primary px-6 py-3 rounded-full text-white text-sm font-semibold hover:shadow-lg transition-all flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                        +92 321 411 4969
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#services" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md">Services</a>
+                <a href="#work" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md">Work</a>
+                <a href="#clients" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md">Clients</a>
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-md">About</a>
+                <a href="tel:+923214114969" class="block px-3 py-3 text-base font-medium text-green-600 font-semibold bg-green-50 rounded-md flex items-center gap-2">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    Call +92 321 411 4969
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 reveal active">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-medium animate-pulse">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                        Fulbright Award-Winning Agency
+                    </div>
+                    
+                    <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+                        From <span class="text-gradient-animate">Complex Problems</span> to Elegant Digital Solutions
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-slate-600 max-w-lg leading-relaxed">
+                        We don't just write code—we architect solutions. From the spark of an idea to deployment at scale, IdeaCentricity transforms your toughest challenges into award-winning software. Trusted by UNICEF, Mercy Corps, and Fortune 500s across 3 continents.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="btn-primary px-8 py-4 rounded-full text-white font-semibold text-center flex items-center justify-center gap-2 group">
+                            Start Your Project
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="https://youtu.be/NsFXo4pW2cg" target="_blank" class="px-8 py-4 rounded-full border-2 border-slate-300 text-slate-700 font-semibold hover:border-slate-400 hover:bg-slate-50 transition-all text-center flex items-center justify-center gap-2">
+                            <i data-lucide="play-circle" class="w-5 h-5 text-red-500"></i>
+                            Watch Our Story
+                        </a>
+                    </div>
+
+                    <div class="flex items-center gap-6 pt-4">
+                        <div class="flex -space-x-2">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-white" alt="Client">
+                        </div>
+                        <div class="text-sm">
+                            <p class="font-semibold text-slate-900">150+ Projects Delivered</p>
+                            <p class="text-slate-500">10+ Years Excellence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative lg:h-[600px] flex items-center justify-center reveal">
+                    <!-- Animated Background Elements -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-100 via-purple-100 to-pink-100 rounded-3xl transform rotate-3 opacity-50 animate-pulse-slow"></div>
+                    
+                    <!-- Main Code Editor Window -->
+                    <div class="relative bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md animate-float">
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-slate-400">
+                                <i data-lucide="git-branch" class="w-4 h-4"></i>
+                                main
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3 font-mono text-sm">
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">1</span>
+                                <span class="text-purple-600">class</span>
+                                <span class="text-blue-600">IdeaCentricity</span>
+                                <span class="text-slate-600">{</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">2</span>
+                                <span class="text-slate-600 pl-4">constructor() {</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">3</span>
+                                <span class="text-slate-600 pl-8">this.mission =</span>
+                                <span class="text-green-600">"Solve Complex Problems"</span>
+                                <span class="text-slate-600">;</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">4</span>
+                                <span class="text-slate-600 pl-8">this.awards = [</span>
+                                <span class="text-yellow-600">"Fulbright"</span>
+                                <span class="text-slate-600">,</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">5</span>
+                                <span class="text-yellow-600 pl-8">"Startup Cup"</span>
+                                <span class="text-slate-600">,</span>
+                                <span class="text-yellow-600">"GIST"</span>
+                                <span class="text-slate-600">];</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">6</span>
+                                <span class="text-slate-600 pl-4">}</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">7</span>
+                                <span class="text-purple-600 pl-4">async</span>
+                                <span class="text-blue-600">deliver</span>
+                                <span class="text-slate-600">(idea) {</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-slate-400">8</span>
+                                <span class="text-slate-600 pl-8">const solution =</span>
+                                <span class="text-purple-600">await</span>
+                            
